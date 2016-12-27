@@ -11,6 +11,7 @@ See below for the original readme.
 
 In case of an update to karma-jasmine-jquery, perform the following steps to
 reproduce this module:
+
 1. Clone the new version from https://github.com/bessdsv/karma-jasmine-jquery.git
 2. Clone the customized bower-installer from https://github.com/bessdsv/bower-installer.git
 3. Place folder 'bower-installer' into the 'karma-jasmine-jquery' folder
