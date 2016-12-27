@@ -16,12 +16,12 @@ reproduce this module:
 2. Clone the customized bower-installer from https://github.com/bessdsv/bower-installer.git
 3. Place folder 'bower-installer' into the 'karma-jasmine-jquery' folder
 4. Modify dependency 'bower-installer' in 'package.json':
-```
-"dependencies": {
-  "bower": "^1.3.9",
-  "bower-installer": "file:./bower-installer"
-}
-```
+  ```
+  "dependencies": {
+    "bower": "^1.3.9",
+    "bower-installer": "file:./bower-installer"
+  }
+  ```
 5. Update module name to 'karma-jasmine-jquery-nodep'
 6. Update version to whichever version karma-jasmine-jquery is currently on.
 
