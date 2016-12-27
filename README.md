@@ -7,6 +7,12 @@ Fork of
 Removed dependency on GitHub by adding the custom bower-installer to this repo.
 See below for the original readme.
 
+## Adding to your project
+1. Package these sources into a tar.gz
+2. Upload it wherever (for example, a Nexus NPM repo)
+3. Add it to your package.json under devDependencies
+4. Use it as you would the original module
+
 ## Updating karma-jasmine-jquery
 
 In case of an update to karma-jasmine-jquery, perform the following steps to
