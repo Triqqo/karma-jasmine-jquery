@@ -8,7 +8,7 @@ Removed dependency on GitHub by adding the custom bower-installer to this repo.
 See below for the original readme.
 
 ## Adding to your project
-1. Package these sources into a tar.gz
+1. Package these sources by using 'npm pack'
 2. Upload it wherever (for example, a Nexus NPM repo)
 3. Add it to your package.json under devDependencies
 4. Use it as you would the original module
@@ -21,16 +21,20 @@ reproduce this module:
 1. Clone the new version from https://github.com/bessdsv/karma-jasmine-jquery.git
 2. Clone the customized bower-installer from https://github.com/bessdsv/bower-installer.git
 3. Place folder 'bower-installer' into the 'karma-jasmine-jquery' folder
-4. Modify dependency 'bower-installer' in 'package.json':
+4. Remove dependency 'bower-installer' from 'package.json':
+5. Modify the post-install script 'install.js', so it installs bower-installer
+from the included folder:
 
   ```
-  "dependencies": {
-    "bower": "^1.3.9",
-    "bower-installer": "file:./bower-installer"
-  }
+  var exec = require('child_process').exec;
+
+  exec('npm install "./bower-installer"');
+
+  exec(require('path').join('node_modules', '.bin', 'bower-installer') + ' --keep --remove');
+  var fs = require('fs');
   ```
-5. Update module name to 'karma-jasmine-jquery-nodep'
-6. Update version to whichever version karma-jasmine-jquery is currently on.
+6. Update module name to 'karma-jasmine-jquery-nodep'
+7. Update version to whichever version karma-jasmine-jquery is currently on.
 
 # Original readme
 
